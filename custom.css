@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* Custom CSS */
+
+p img {
+    border: 0px #e0e0e0 solid !important;
+	}
+marquee ul li p{
+font-size: 10px !important;
+	color: #333333;
+	}
+.btn {
+	white-space: wrap !important;
+}
+
+.banner-lr-box{
+	margin-bottom: 0 !important;
+	border: 0 !important;
+}
+.banner-mid{
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+.top-link {
+	color: #ffffff !important;
+	font-size:12px;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.7rem !important;
+}
+
+.about-section ul {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.about-section ul li {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+/* Custom CSS */

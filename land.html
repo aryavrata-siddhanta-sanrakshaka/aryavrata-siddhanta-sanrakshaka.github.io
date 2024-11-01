@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            background-color: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .top-bar {
+            background-color: green;
+            color: white;
+            padding: 5px 0;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .updates-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .reports-updates, .events-seminar {
+            background-color: #f5f5f5;
+            padding: 15px;
+            width: 40%;
+            box-shadow: 2px 2px 10px #ccc;
+        }
+
+        .news-scroll {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .links-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .admission, .examination {
+            background-color: #e67e22;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        footer {
+            background-color: #d35400;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <marquee>शालारक्षयंतां <b>(पुरस्काराध्यक्ष, सह0 पुरस्काराध्यक्ष)</b> के पदों पर नियुक्ति हेतु अहर्ता एवं सामान्य निर्देश/विस्तारित आवेदन पत्र का प्रारूप...</marquee>
+        </div>
+        <h1>ABOUT SAMPURNANAND SANSKRIT VISHWAVIDYALAYA</h1>
+        <p>Information about the Ph.D. Degrees awarded by the University during the year 2016/2017/2018/2019/2020</p>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile">
+            <img src="path/to/image1.jpg" alt="Chancellor">
+            <h3>SMT. ANANDIBEN PATEL</h3>
+            <p>H. E. Chancellor-cum-Governor of U.P.</p>
+            <button>View Message</button>
+        </div>
+        <div class="profile">
+            <img src="path/to/image2.jpg" alt="Vice-Chancellor">
+            <h3>PROF. BIHARI LAL SHARMA</h3>
+            <p>Vice-Chancellor, Sampurnanand Sanskrit Vishwavidyalaya</p>
+            <button>View Message</button>
+        </div>
+    </section>
+
+    <section class="updates-section">
+        <div class="reports-updates">
+            <h2>REPORTS & UPDATE</h2>
+            <div class="news-scroll">
+                <ul id="newsList">
+                    <li>दिनांक 10.04.2024 को विश्वविद्यालय स्थापना दिवस के अवसर पर अंतर्राष्ट्रीय संगोष्ठी...</li>
+                    <li>Filling up vacancies of various post in DMEO on Deputation (ISTC)/ Contract basis...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="events-seminar">
+            <h2>EVENTS & SEMINAR</h2>
+            <div class="news-scroll">
+                <ul id="eventsList">
+                    <li>दिनांक 05.11.2020 को "ऑनलाइन शिक्षा प्लेटफॉर्मों और उपकरणों का उपयोग" विषयक वेबीनार की सूचना...</li>
+                    <li>सांस्कृतिक चेतना के उन्नयन में शिक्षा एवं भाषा का अवदान (राष्ट्रीय संगोष्ठी- 06-07 जनवरी 2020)...</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="admission">
+            <h2>ADMISSION</h2>
+            <a href="#">Samarth Portal</a>
+            <a href="#">Online Sanskrit Training Centre</a>
+            <a href="#">UP Higher Education Digital Library</a>
+        </div>
+
+        <div class="examination">
+            <h2>EXAMINATION</h2>
+            <a href="#">For Examination Click Here</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="important-links">
+                <h3>IMPORTANT LINKS</h3>
+                <ul>
+                    <li><a href="#">UGC</a></li>
+                    <li><a href="#">U.P. Govt.</a></li>
+                    <li><a href="#">NAAC</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3>CONTACT US</h3>
+                <p>Sampurnanand Sanskrit Vishwavidyalaya, Varanasi</p>
+                <p>Email: vc.ssvv@gmail.com</p>
+                <p>Phone: 0542-2204089</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts.js">
+        // scripts.js
+
+        // Function for vertical news scroll
+        function scrollNews(elementId) {
+            const list = document.getElementById(elementId);
+            let items = list.getElementsByTagName('li');
+        
+            setInterval(() => {
+                list.appendChild(items[0]); // Move the first item to the end
+                items = list.getElementsByTagName('li');
+            }, 3000);
+        }
+        
+        // Initialize scroll for news and events
+        document.addEventListener("DOMContentLoaded", () => {
+            scrollNews('newsList');
+            scrollNews('eventsList');
+        });
+
+    </script>
+</body>
+</html>

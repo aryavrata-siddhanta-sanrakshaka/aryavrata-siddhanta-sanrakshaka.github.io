@@ -1,6 +1,31 @@
+
+
+
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-right: linear-gradient(90deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-bottom: linear-gradient(180deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-left: linear-gradient(270deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-top-right: linear-gradient(45deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-bottom-right: linear-gradient(135deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-top-left: linear-gradient(225deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-bottom-left: linear-gradient(315deg, #654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+$gradient-radial: radial-gradient(#654139ff, #E87D08ff, #FDFDFCff, #817084ff, #F3C728ff, #B68245ff, #BF7C90ff);
+
+
+
 :root{
     --white: white;
     --black: black;
+    /* CSS HEX */
+    --rose-ebony: #654139ff;
+    --tangerine: #E87D08ff;
+    --white: #FDFDFCff;
+    --mountbatten-pink: #817084ff;
+    --saffron: #F3C728ff;
+    --copper: #B68245ff;
+    --puce: #BF7C90ff;
 }
 
 .container{
@@ -107,4 +132,64 @@
         margin-top: 63px;
         padding-bottom: 5px;
     }
+}
+
+.vice-chancellor {
+    background-color: #ff7043;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.vice-chancellor img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.glimpses {
+    background-color: #fff9c4;
+    padding: 20px;
+    margin: 20px;
+}
+.twitter-feed {
+    background-color: #e3f2fd;
+    padding: 20px;
+    margin: 20px;
+}
+.footer {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+.footer-column h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+.map-container {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+}
+.copyright {
+    text-align: center;
+    background-color: #d84315;
+    color: white;
+    padding: 10px;
 }
