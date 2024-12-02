@@ -200,12 +200,14 @@
 					</div>
 					<div class="col-md-4">
 						<h3>Update</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-						<ul class="ministries-list">
-							<li><i class="icon-check"></i>Dignissimos asperiores vitae velit</li>
-							<li><i class="icon-check"></i>Odit ab aliquam dolor eius.</li>
-							<li><i class="icon-check"></i>Asperiores vitae velit veniam totam</li>
-							<li><i class="icon-check"></i>Asccusamus alias autem provident</li>
+						<ul id="newsTicker" class="ministries-list">
+							<li><i class="icon-check"></i>Yoga, Ayurveda and Naturopathy Projects</li>
+							<li><i class="icon-check"></i>Shastra Conservation Project</li>
+							<li><i class="icon-check"></i>Karmakand Project</li>
+							<li><i class="icon-check"></i>Ganga Mahaarati Project </li>
+							<li><i class="icon-check"></i>Gurukul Shiksha Project</li>
+							<li><i class="icon-check"></i>Annadaan Project</li>
+							<li><i class="icon-check"></i>Agriculture and Cow Protection Project</li>
 						</ul>
 					</div>
 				</div>
@@ -587,6 +589,28 @@
 				} else {
 					icon.style.opacity = '0.8';
 				}
+			});
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const ticker = document.getElementById('newsTicker');
+				const items = Array.from(ticker.getElementsByTagName('li'));
+				const itemHeight = items[0].offsetHeight;
+				const totalItems = items.length;
+				let position = 0;
+				let currentIndex = 0;
+			
+				function scrollTicker() {
+					position -= 1;
+					if (position <= -itemHeight) {
+						position = 0;
+						currentIndex = (currentIndex + 1) % totalItems;
+						ticker.appendChild(items[currentIndex]);
+					}
+					ticker.style.transform = `translateY(${position}px)`;
+				}
+			
+				setInterval(scrollTicker, 60); // Adjust the interval for speed
 			});
 		</script>
 		
