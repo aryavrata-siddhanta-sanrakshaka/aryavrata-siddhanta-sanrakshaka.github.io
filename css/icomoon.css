@@ -374,6 +374,7 @@
 }
 .icon-check:before {
   content: "\e116";
+  color: #444;
 }
 .icon-cross2:before {
   content: "\e117";
@@ -2097,7 +2098,7 @@
 .icon-rss22:before {
   content: "\eacc";
 }
-.icon-youtube:before {
+.icon-x:before {
   content: "\eacd";
 }
 .icon-youtube2:before {
