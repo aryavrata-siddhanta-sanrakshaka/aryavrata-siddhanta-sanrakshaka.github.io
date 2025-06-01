@@ -76,6 +76,41 @@
         	    width: 35px;
         	    height: 35px;
         	}
+
+			#newsTickerContainer {
+			  height: 2.5em; /* Adjust based on item height */
+			  overflow: hidden;
+			  position: relative;
+			  background: #f9f9f9;
+			  border: 1px solid #ccc;
+			  padding-left: 1em;
+			  font-family: 'Segoe UI', sans-serif;
+			  font-size: 0.95em;
+			  color: #333;
+			}
+
+			#newsTicker {
+			  display: flex;
+			  flex-direction: column;
+			  transition: transform 0.3s ease-in-out; /* Smooth transition */
+			}
+
+			#newsTicker li {
+			  list-style: none;
+			  padding: 0.4em 0;
+			  border-bottom: 1px solid #eee;
+			  white-space: nowrap;
+			  text-overflow: ellipsis;
+			  overflow: hidden;
+			}
+
+			/* Optional: hover highlight effect */
+			#newsTicker li:hover {
+			  background-color: #f0f0f0;
+			  cursor: pointer;
+			  color: #007bff;
+			}
+
 		</style>
 
 	</head>
@@ -96,17 +131,17 @@
 								<li class="has-dropdown">
 									<a href="#">Programs</a>
 									<ul class="dropdown">
-										<li><a href="#">Aarogyam</a></li>
-										<li><a href="#">Tatvagyan</a></li>
-										<li><a href="#">Purohit</a></li>
-										<li><a href="#">Aradhana</a></li>
-										<li><a href="#">Bodham</a></li>
-										<li><a href="#">Anna</a></li>
-										<li><a href="#">Gokulam</a></li>
+										<li><a href="#aarogyam">Aarogyam</a></li>
+										<li><a href="#tatvagyan">Tatvagyan</a></li>
+										<li><a href="#purohit">Purohit</a></li>
+										<li><a href="#aradhana">Aradhana</a></li>
+										<li><a href="#bodham">Bodham</a></li>
+										<li><a href="#anna">Anna</a></li>
+										<li><a href="#gokulam">Gokulam</a></li>
 									</ul>
 								</li>
 								<li><a href="#">Annual Events</a></li>
-								<li><a href="contact.html">About</a></li>
+								<li><a href="#">About</a></li>
 								<li><a href="#">Gallery</a></li>
 								<li><a href="#" class="donate">Donate</a></li>
 							</ul>
@@ -128,8 +163,8 @@
 									<div class="slider-text">
 										<div class="slider-text-inner">
 											<h1>Daily &amp; Yoga Training</h1>
-												<h2>at Gurukul <a href="https://youtu.be/4PwaH555-5U?si=AdnhPTjb46uwJKcT" target="_blank">Peek</a></h2>
-												<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/4PwaH555-5U?si=AdnhPTjb46uwJKcT"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>
+												<h2>at Gurukul </h2>
+												<!--<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/4PwaH555-5U?si=AdnhPTjb46uwJKcT"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>-->
 										</div>
 									</div>
 								</div>
@@ -144,8 +179,8 @@
 									<div class="slider-text">
 										<div class="slider-text-inner">
 											<h1>World Yoga Day - 2023</h1>
-												<h2>at Yoga camps<a href="https://youtu.be/lvhKmizyBZw?si=Ej4A0I4CWMA6Qbzd" target="_blank">Peek</a></h2>
-												<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/lvhKmizyBZw?si=Ej4A0I4CWMA6Qbzd"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>
+												<h2>at Yoga camps</h2>
+												<!--<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/lvhKmizyBZw?si=Ej4A0I4CWMA6Qbzd"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>-->
 										</div>
 									</div>
 								</div>
@@ -160,8 +195,8 @@
 									<div class="slider-text">
 										<div class="slider-text-inner text-center">
 											<h1>Yoga Camps</h1>
-												<h2>at Institutions and Places<a href="https://youtu.be/HU44B2AqR6I?si=huLPpOwcUxzE1FNq" target="_blank">Peek</a></h2>
-												<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/HU44B2AqR6I?si=huLPpOwcUxzE1FNq"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>
+												<h2>at Institutions and Places</h2>
+												<!--<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://youtu.be/HU44B2AqR6I?si=huLPpOwcUxzE1FNq"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn">Join us here! <i class="icon-arrow-right3"></i></a></p>-->
 										</div>
 									</div>
 								</div>
@@ -174,7 +209,7 @@
 			<div id="fh5co-about">
 				<div class="row">
 					<div class="col-md-4">
-						<h3>Quick Links</h3>
+						<h3><span class="icon">🔗</span> Quick Links</h3>
 						<ul id="newsTicker" class="ministries-list">
 							<li>Sanskrit Samsbhashan Camp 2025 </li>
 							<li>Free Yog Camp 2025</li>
@@ -194,7 +229,7 @@
 						<p>Our goal is to make India a global leader in spiritual, cultural, and intellectual domains, reclaiming our ancient glory.</p>
 					</div>
 					<div class="col-md-4">
-						<h3>Updates</h3>
+						<h3><span class="icon">📋</span> Updates</h3>
 						<ul id="newsTicker" class="ministries-list">
 							<li><i class="icon-check"></i>Sanskrit Samsbhashan Camp 2025 संस्कृत-सम्भाषण-शिविरम् (21 May - 21 June) </li>
 							<li><i class="icon-check"></i>Free Yog Camp 2025 निःशुल्क योग शिविर - International Yoga Day</li>
@@ -257,9 +292,9 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 animate-box">
+					<div id="aarogyam" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/Aarogayam.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/Aarogayam.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Aarogyam</a></h3>
 								<p>Promoting physical and spiritual health through Yoga, Ayurveda, and Naturopathy.</p>
@@ -273,9 +308,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="tatvagyan" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Tatvagyan</a></h3>
 								<p>Preserving India’s ancient wisdom and traditional knowledge.</p>
@@ -288,9 +323,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="purohit" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/purohit.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/purohit.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Purohit</a></h3>
 								<p>Perform traditional worship and rituals with the guidance of qualified Brahmins.</p>
@@ -303,9 +338,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="aradhana" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/aaradhana.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/aaradhana.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Aradhana</a></h3>
 								<p>Witness the grandeur of Varanasi's Ganga Mahaarati. Book auspicious functions performed by qualified priests:</p>
@@ -318,9 +353,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="bodham" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/bodham.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/bodham.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Bodham</a></h3>
 								<p>Reviving India’s ancient education system by supporting Gurukuls.</p>
@@ -333,9 +368,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="anna" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Anna</a></h3>
 								<p>Fighting hunger by providing meals to the needy.</p>
@@ -347,9 +382,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+					<div id="gokulam" class="col-md-4 animate-box">
 						<div class="services">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Gokulam</a></h3>
 								<p>Promoting organic farming and ensuring the welfare of cows.</p>
@@ -369,22 +404,22 @@
 				<h2>Meet Our Founders</h2>
 				<div class="team-container">
 				  <div class="team-member">
-					<img src="images/head1.png" alt="Founder 1" class="team-photo">
-					<h3>Prof. Diva Chetan Brahmachari</h3>
+					<img src="images/head1.png" alt="President" class="team-photo">
+					<h3>Prof. Divya Chetan Brahmachari</h3>
 					<p class="role">President</p>
-					<p class="bio">A brief bio about the first founder. Passionate about innovation and growth.</p>
+					<p class="bio">A brief bio about the first founder.</p>
 				  </div>
 				  <div class="team-member">
-					<img src="images/head2.png" alt="Founder 2" class="team-photo">
+					<img src="images/head2.png" alt="Vice-President" class="team-photo">
 					<h3>Mountaineer Santosh Yadav</h3>
 					<p class="role">Vice-President</p>
-					<p class="bio">A brief bio about the second founder. Expert in technology and leadership.</p>
+					<p class="bio">A brief bio about the second founder.</p>
 				  </div>
 				  <div class="team-member">
-					<img src="images/head3.png" alt="Founder 3" class="team-photo">
+					<img src="images/head3.png" alt="Secretary" class="team-photo">
 					<h3>Ritesh Dubey</h3>
 					<p class="role">Secretary</p>
-					<p class="bio">A brief bio about the third founder. Specializes in operations and efficiency.</p>
+					<p class="bio">A brief bio about the third founder.</p>
 				  </div>
 				</div>
 			</section>
@@ -393,41 +428,35 @@
 				<div class="row animate-box">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
 						<h2>Recent Webinars</h2>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<p>Here are some recent webinars held.</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 text-center animate-box">
 						<div class="sermon-entry">
-							<div class="sermon" style="background-image: url(images/sermon-1.jpg);">
-								<div class="play">
-									<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
-								</div>
+							<div class="sermon">
+								<iframe class="play" width="290" height="auto" src="https://www.youtube.com/embed/yXJbS4N9m4Y?si=tbI1R0AmplgyxwiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
-							<h3>eismod tempor</h3>
-							<span>eismod tempor</span>
+							<h3>सूर्य-विज्ञान संगोष्ठी</h3>
+							<span>Symposium</span>
 						</div>
 					</div>
 					<div class="col-md-4 text-center animate-box">
 						<div class="sermon-entry">
-							<div class="sermon" style="background-image: url(images/sermon-3.jpg);">
-								<div class="play">
-									<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
-								</div>
+							<div class="sermon">
+								<iframe class="play" width="290" height="auto" src="https://www.youtube.com/embed/OHkTwnr78jM?si=A24Rf1IoeOuYGjBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
-							<h3>eismod tempor</h3>
-							<span>eismod tempor</span>
+							<h3>MahashivRatri 2025</h3>
+							<span>Webinar</span>
 						</div>
 					</div>
 					<div class="col-md-4 text-center animate-box">
 						<div class="sermon-entry">
-							<div class="sermon" style="background-image: url(images/sermon-2.jpg);">
-								<div class="play">
-									<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
-								</div>
+							<div class="sermon">
+								<iframe class="play" width="290" height="auto" src="https://www.youtube.com/embed/HUD6m64Xlxw?si=cvjVGW9Q3ZKCO2NH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
-							<h3>eismod tempor</h3>
-							<span>eismod tempor</span>
+							<h3>Naturopathy</h3>
+							<span>Dr.Satendra Mishra</span>
 						</div>
 					</div>
 				</div>
@@ -442,23 +471,23 @@
 									<div class="bible-verse-slide active text-center">
 										<blockquote>
 											<p>&ldquo;सनातन की खोज करें... बातें शास्वत सनातन की...&rdquo;</p>
-											<span>eiusmod tempod</span>
+											<span></span>
 										</blockquote>
 									</div>
 								</div>
 								<div class="item">
 									<div class="bible-verse-slide active text-center">
 										<blockquote>
-											<p>&ldquo;सरस्वती दृषद्वत्योर्देवनद्योरन्तरम्।तं देवनिर्मितं देशमार्यवर्तेति प्रचक्षते।। &rdquo;</p>
-											<span>eiusmod tempor</span>
+											<p>&ldquo;सरस्वती दृषद्वत्योर्देवनद्योरन्तरम्। <br>तं देवनिर्मितं देशमार्यवर्तेति प्रचक्षते।। &rdquo;</p>
+											<span>मनुस्मृति - (2/17)</span>
 										</blockquote>
 									</div>
 								</div>
 								<div class="item">
 									<div class="bible-verse-slide active text-center">
 										<blockquote>
-											<p>&ldquo;आसमुद्रात्तु वै पूर्वादासमुद्रात्तु पश्चिमात्। तयोरेवान्तरं    गिर्यारार्यावर्तं   विदुर्बुधाः।।&rdquo;</p>
-											<span>eiusmod tempor</span>
+											<p>&ldquo;आसमुद्रात्तु वै पूर्वादासमुद्रात्तु पश्चिमात्। <br>तयोरेवान्तरं    गिर्यारार्यावर्तं   विदुर्बुधाः।।&rdquo;</p>
+											<span>मनुस्मृति - (2/22)</span>
 										</blockquote>
 									</div>
 								</div>
@@ -516,7 +545,7 @@
 				<div class="row">
 					<div class="col-md-3 animate-box">
 						<div class="news">
-							<a href="https://aryavartamessage.blogspot.com/2024/04/blog-post_1.html?m=1" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-1.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="https://aryavartamessage.blogspot.com/2024/04/blog-post_1.html?m=1" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-1.jpg" alt=""></a>
 							<div class="desc">
 								<span class="date">April 1, 2024</span>
 								<h3><a href="https://aryavartamessage.blogspot.com/2024/04/blog-post_1.html?m=1" target="_blank">भगवत्पाद शङ्कराचार्य</a></h3>
@@ -527,7 +556,7 @@
 					</div>
 					<div class="col-md-3 animate-box">
 						<div class="news">
-							<a href="https://aryavartamessage.blogspot.com/2024/03/blog-post_9.html" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="https://aryavartamessage.blogspot.com/2024/03/blog-post_9.html" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt=""></a>
 							<div class="desc">
 								<span class="date">March 31, 2024</span>
 								<h3><a href="https://aryavartamessage.blogspot.com/2024/03/blog-post_9.html" target="_blank">षट् कर्म निरुपण</a></h3>
@@ -538,23 +567,23 @@
 					</div>
 					<div class="col-md-3 animate-box">
 						<div class="news">
-							<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="https://aryavartamessage.blogspot.com/2024/04/blog-post.html" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt=""></a>
 							<div class="desc">
 								<span class="date">April 1, 2024</span>
-								<h3><a href="#">सप्त ऋषियों की अवधारणा</a></h3>
+								<h3><a href="https://aryavartamessage.blogspot.com/2024/04/blog-post.html" target="_blank">सप्त ऋषियों की अवधारणा</a></h3>
 								<p>ऋग्वेद के प्रसिद्ध ऋषि अंगिरा ब्रह्मा के पुत्र थे। उनके पुत्र बृहस्पति देवताओं के गुरु थे। ऋग्वेद के अनुसार, ऋषि अंगिरा ने सर्वप्रथम अग्नि उत्पन्न...</p>
-								<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+								<a href="https://aryavartamessage.blogspot.com/2024/04/blog-post.html" target="_blank">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3 animate-box">
 						<div class="news">
-							<a href="#" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-4.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+							<a href="#" target="_blank" class="img-holder"><img class="img-responsive" src="images/img-4.jpg" alt=""></a>
 							<div class="desc">
 								<span class="date">Feb 20, 2024</span>
 								<h3><a href="#" target="_blank">Meditation & Hormonal Secretion</a></h3>
 								<p>Meditation has been found to influence hormonal secretion in several ways. Here are
-some of the effects that have been observe..</p>
+some of the effects..</p>
 								<a href="#" target="_blank">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
@@ -618,26 +647,30 @@ some of the effects that have been observe..</p>
 			});
 		</script>
 		<script>
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener('DOMContentLoaded', function () {
 				const ticker = document.getElementById('newsTicker');
-				const items = Array.from(ticker.getElementsByTagName('li'));
-				const itemHeight = items[0].offsetHeight;
-				const totalItems = items.length;
 				let position = 0;
-				let currentIndex = 0;
-			
+				let itemHeight = ticker.querySelector('li').offsetHeight;
+
 				function scrollTicker() {
 					position -= 1;
-					if (position <= -itemHeight) {
-						position = 0;
-						currentIndex = (currentIndex + 1) % totalItems;
-						ticker.appendChild(items[currentIndex]);
-					}
 					ticker.style.transform = `translateY(${position}px)`;
+				
+					if (Math.abs(position) >= itemHeight) {
+						const firstItem = ticker.querySelector('li');
+						itemHeight = firstItem.offsetHeight; // Update height in case of different size
+						ticker.appendChild(firstItem); // Move first item to end
+						ticker.style.transform = 'translateY(0)';
+						position = 0;
+					}
 				}
 			
-				setInterval(scrollTicker, 60); // Adjust the interval for speed
+				setInterval(scrollTicker, 30); // Faster and smoother
 			});
+
+			ticker.addEventListener('mouseenter', () => clearInterval(intervalID));
+			ticker.addEventListener('mouseleave', () => intervalID = setInterval(scrollTicker, 30));
+
 		</script>
 		
 		<!-- jQuery -->

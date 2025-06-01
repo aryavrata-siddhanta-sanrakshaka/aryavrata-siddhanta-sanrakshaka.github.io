@@ -1,3 +1,22 @@
+:root {
+  --color-notice-bg: #eafaf0;      /* pale mint background for Notice Board */
+  --color-notice-border: #caf2d8;  /* subtle border just slightly darker */
+  --color-notice-btn: #ff7b24;     /* bright orange “View All” button */
+
+  --color-links-bg: #fdf9f1;       /* very pale cream for Quick Links */
+  --color-links-border: #f1e9d6;   /* slightly deeper cream border */
+  --color-links-btn: #389e0d;      /* dark green “View All” button */
+
+  --color-card-shadow: rgba(0,0,0,0.05);
+  --color-text-heading: #d6461c;   /* rich burnt-orange for headings */
+  --color-text-sub: #555;          /* medium grey for item text */
+
+  --bp-phone-max: 575px;   /* up to 575px = phones */
+  --bp-tablet-max: 767px;  /* 576–767px = small tablets / large phones */
+  --bp-desktop-max: 991px; /* 768–991px = tablets / small laptops */
+  /* 992px+ = large laptops & desktops */
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
