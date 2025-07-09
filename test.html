@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Aryavarta Siddhanta Sanrakshaka Trust</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Aryavarta Siddhanta Sanrakshaka Trust is a leading institution in the fields of Sanatan Vedic system, Vedic knowledge tradition, social welfare, religion, and spirituality." />
+		<meta name="keywords" content="yoga, aryavarta, gurukul, vedic system, vedic knowledge, indian traditon, social welfare, religion , spirituality, religion, vedic tradition, sanskrit, books, yog, yog sansthan, yog samsthanam, asanena rujo hanti, आसनेन रुजो हन्ति, योग, आर्यावर्त, indian culture, shastra, ancient learnings" />
+
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"
+		>
+		
+		<!-- Animate.css 
+		<link rel="stylesheet" href="css/animate.css">
+		 Icomoon Icon Fonts
+		<link rel="stylesheet" href="css/icomoon.css">
+		 Bootstrap  
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		 Magnific Popup 
+		<link rel="stylesheet" href="css/magnific-popup.css">
+
+		 Flexslider  
+		<link rel="stylesheet" href="css/flexslider.css">
+
+		 Owl Carousel  
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+		 Theme style 
+		<link rel="stylesheet" href="css/style.css">
+
+		 Modernizr JS 
+		<script src="js/modernizr-2.6.2.min.js"></script> -->
+		<style>
+			.home-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #fff;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        	}
+
+        	.home-icon:hover {
+        	    transform: scale(1.1);
+        	    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        	}
+
+        	.home-icon img {
+        	    width: 100px;
+        	    height: 100px;
+        	}
+			
+			* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			}
+
+			body {
+			height: 100vh;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+			}
+
+			main {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+			}
+
+			.item {
+			width: 100px;
+			height: 200px;
+			list-style-type: none;
+			position: absolute;
+			top: 10%; /* slightly raised preview */
+			transform: translateY(-50%);
+			z-index: 10;
+			background-position: center;
+			background-size: cover;
+			border-radius: 20px;
+			box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+			transition: all 0.5s ease;
+			}
+
+			.item:nth-child(1),
+			.item:nth-child(2) {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			transform: none;
+			border-radius: 0;
+			box-shadow: none;
+			opacity: 1;
+			z-index: 1;
+			}
+
+			.item:nth-child(3) { left: 50%; }
+			.item:nth-child(4) { left: calc(50% + 120px); }
+			.item:nth-child(5) { left: calc(50% + 240px); }
+			.item:nth-child(6) { left: calc(50% + 360px); opacity: 0.5; }
+			.item:nth-child(7) { left: calc(50% + 480px); opacity: 0.2; }
+
+			.content {
+			width: min(30vw, 400px);
+			position: absolute;
+			top: 50%;
+			left: 3rem;
+			transform: translateY(-50%);
+			font: 400 0.85rem helvetica, sans-serif;
+			color: white;
+			text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			display: none;
+			}
+
+			.content .title {
+			font-family: 'arial-black';
+			text-transform: uppercase;
+			}
+
+			.content .description {
+			line-height: 1.7;
+			margin: 1rem 0 1.5rem;
+			font-size: 0.8rem;
+			}
+
+			.content button {
+			width: fit-content;
+			background-color: rgba(0, 0, 0, 0.1);
+			color: white;
+			border: 2px solid white;
+			border-radius: 0.25rem;
+			padding: 0.75rem;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			}
+
+			.content button:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+			}
+
+			.item:nth-of-type(2) .content {
+			display: block;
+			animation: show 0.75s ease-in-out 0.3s forwards;
+			}
+
+			@keyframes show {
+			0% {
+				filter: blur(5px);
+				transform: translateY(calc(-50% + 75px));
+			}
+			100% {
+				opacity: 1;
+				filter: blur(0);
+			}
+			}
+
+			.nav {
+			position: absolute;
+			bottom: 2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 5;
+			user-select: none;
+			}
+
+			.nav .btn {
+			background-color: rgba(255, 255, 255, 0.5);
+			color: rgba(0, 0, 0, 0.7);
+			border: 2px solid rgba(0, 0, 0, 0.6);
+			margin: 0 0.25rem;
+			padding: 0.75rem;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all 0.3s;
+			}
+
+			.nav .btn:hover {
+			background-color: rgba(255, 255, 255, 0.3);
+			}
+
+			@media (width > 650px) and (width < 900px) {
+			.content .title        { font-size: 1rem; }
+			.content .description  { font-size: 0.7rem; }
+			.content button        { font-size: 0.7rem; }
+
+			.item {
+				width: 160px;
+				height: 270px;
+				&:nth-child(3) { left: 50%; }
+				&:nth-child(4) { left: calc(50% + 120px); }
+				&:nth-child(5) { left: calc(50% + 240px); }
+				&:nth-child(6) { left: calc(50% + 360px); opacity: 0.5; }
+				&:nth-child(7) { left: calc(50% + 480px); opacity: 0.2; }
+			}
+			}
+
+			@media (width < 650px) {
+			.content .title        { font-size: 0.9rem; }
+			.content .description  { font-size: 0.65rem; }
+			.content button        { font-size: 0.7rem; }
+
+			.item {
+				width: 130px;
+				height: 220px;
+				&:nth-child(3) { left: 50%; }
+				&:nth-child(4) { left: calc(50% + 120px); }
+				&:nth-child(5) { left: calc(50% + 240px); }
+				&:nth-child(6) { left: calc(50% + 360px); opacity: 0.5; }
+				&:nth-child(7) { left: calc(50% + 480px); opacity: 0.2; }
+			}
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<main>
+			<ul class='slider'>
+				<li class='item' style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+				<div class='content'>
+					<h2 class='title'>"Lossless Youths"</h2>
+					<p class='description'> Lorem ipsum, dolor sit amet consectetur
+					adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+					praesentium nisi. Id laboriosam ipsam enim. </p>
+					<button>Read More</button>
+				</div>
+				</li>
+				<li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
+				<div class='content'>
+					<h2 class='title'>"Estrange Bond"</h2>
+					<p class='description'> Lorem ipsum, dolor sit amet consectetur
+					adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+					praesentium nisi. Id laboriosam ipsam enim. </p>
+					<button>Read More</button>
+				</div>
+				</li>
+				<li class='item' style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
+				<div class='content'>
+					<h2 class='title'>"The Gate Keeper"</h2>
+					<p class='description'> Lorem ipsum, dolor sit amet consectetur
+					adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+					praesentium nisi. Id laboriosam ipsam enim. </p>
+					<button>Read More</button>
+				</div>
+				</li>
+				<li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+				<div class='content'>
+					<h2 class='title'>"Last Trace Of Us"</h2>
+					<p class='description'>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+					</p>
+					<button>Read More</button>
+				</div>
+				</li>
+				<li class='item' style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
+				<div class='content'>
+					<h2 class='title'>"Urban Decay"</h2>
+					<p class='description'>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+					</p>
+					<button>Read More</button>
+				</div>
+				</li>
+				<li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+				<div class='content'>
+					<h2 class='title'>"The Migration"</h2>
+					<p class='description'> Lorem ipsum, dolor sit amet consectetur
+					adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+					praesentium nisi. Id laboriosam ipsam enim. </p>
+					<button>Read More</button>
+				</div>
+				</li>
+			</ul>
+			<nav class='nav'>
+				<ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+				<ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+			</nav>
+		</main>
+		
+		<div class="home-icon" id="home">
+			<a href="index.html">
+				<img src="images/logo.png" alt="home">
+			</a>
+		</div>
+		<script>
+			// Optional: Add custom behavior here if needed.
+			// For example, you could dynamically adjust the icon visibility.
+			window.addEventListener('scroll', function () {
+				const icon = document.getElementById('whatsapp-icon');
+				if (window.scrollY > 100) {
+					icon.style.opacity = '1';
+				} else {
+					icon.style.opacity = '0.8';
+				}
+			});
+		</script>
+		<script>
+			const slider = document.querySelector('.slider');
+
+			function activate(e) {
+			const items = document.querySelectorAll('.item');
+			if (e.target.matches('.next')) slider.append(items[0]);
+			if (e.target.matches('.prev')) slider.prepend(items[items.length - 1]);
+			}
+
+			document.addEventListener('click', activate, false);
+
+		</script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+		<!-- Counters -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://asstrust.in/</title>
+  <link>https://asstrust.in/</link>
+
+<item>
+     <link>https://asstrust.in/</link>
+     <title>Aryavarta Siddhanta Sanrakshaka Trust</title>
+     <description>Aryavarta Siddhanta Sanrakshaka Trust is a leading institution in the fields of Sanatan Vedic system, Vedic knowledge tradition, social welfare, religion, and spirituality.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://asstrust.in/index.html</link>
+     <title>Aryavarta Siddhanta Sanrakshaka Trust</title>
+     <description>Aryavarta Siddhanta Sanrakshaka Trust is a leading institution in the fields of Sanatan Vedic system, Vedic knowledge tradition, social welfare, religion, and spirituality.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
