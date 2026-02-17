@@ -1,0 +1,1523 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Aryavarta Siddhanta Sanrakshaka Trust</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Aryavarta Siddhanta Sanrakshaka Trust is a leading institution in the fields of Sanatan Vedic system, Vedic knowledge tradition, social welfare, religion, and spirituality." />
+	<meta name="keywords"
+		content="yoga, aryavarta, gurukul, vedic system, vedic knowledge, indian traditon, social welfare, religion , spirituality, religion, vedic tradition, sanskrit, books, yog, yog sansthan, yog samsthanam, asanena rujo hanti, आसनेन रुजो हन्ति, योग, आर्यावर्त, indian culture, shastra, ancient learnings" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+
+	<!-- Animate.css 
+		<link rel="stylesheet" href="css/animate.css">
+		 Icomoon Icon Fonts
+		<link rel="stylesheet" href="css/icomoon.css">
+		 Bootstrap  
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		 Magnific Popup 
+		<link rel="stylesheet" href="css/magnific-popup.css">
+
+		 Flexslider  
+		<link rel="stylesheet" href="css/flexslider.css">
+
+		 Owl Carousel  
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+		 Theme style 
+		<link rel="stylesheet" href="css/style.css">
+
+		 Modernizr JS 
+		<script src="js/modernizr-2.6.2.min.js"></script> -->
+	<style>
+		.home-icon {
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+			z-index: 1000;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border: 2px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.home-icon:hover {
+			transform: scale(1.1);
+			background-color: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+		}
+
+		.home-icon img {
+			width: 30px;
+			height: 30px;
+			filter: brightness(0) invert(1);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			height: 100vh;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+		}
+
+		main {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.item {
+			width: 100px;
+			height: 200px;
+			list-style-type: none;
+			position: absolute;
+			top: 10%;
+			/* slightly raised preview */
+			transform: translateY(-50%);
+			z-index: 10;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-color: #1a1a1a;
+			border-radius: 20px;
+			box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+			transition: all 0.5s ease;
+		}
+
+		.item:nth-child(1),
+		.item:nth-child(2) {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			transform: none;
+			border-radius: 0;
+			box-shadow: none;
+			opacity: 1;
+			z-index: 1;
+		}
+
+		/* Blurred background effect for letterboxing */
+		.item:nth-child(1)::before,
+		.item:nth-child(2)::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-image: inherit;
+			background-size: cover;
+			background-position: center;
+			filter: blur(40px);
+			opacity: 0.4;
+			z-index: -1;
+		}
+
+		/* Hide the 3rd child preview (was floating in center) */
+		.item:nth-child(3) {
+			display: none;
+		}
+
+		/* Make stacked preview items square and position on LEFT TOP */
+		.item:nth-child(n+4) {
+			width: 150px;
+			height: 150px;
+			background-size: cover;
+			background-color: transparent;
+			top: 2rem;
+		}
+
+		.item:nth-child(4) {
+			left: 2rem;
+		}
+
+		.item:nth-child(5) {
+			left: calc(2rem + 160px);
+		}
+
+		.item:nth-child(6) {
+			left: calc(2rem + 320px);
+			opacity: 0.8;
+		}
+
+		.item:nth-child(7) {
+			left: calc(2rem + 480px);
+			opacity: 0.6;
+		}
+
+		/* Hide all items after the 7th */
+		.item:nth-child(n+8) {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.content {
+			width: min(30vw, 400px);
+			position: absolute;
+			top: 50%;
+			left: 3rem;
+			transform: translateY(-50%);
+			font: 400 0.85rem 'Source Sans Pro', helvetica, sans-serif;
+			color: white;
+			text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			display: none;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4), transparent);
+			padding: 2rem;
+			border-radius: 10px;
+		}
+
+		.content .title {
+			font-family: 'arial-black';
+			text-transform: uppercase;
+			font-size: 2rem;
+		}
+
+		.content .description {
+			line-height: 1.7;
+			margin: 1rem 0 1.5rem;
+			font-size: 1.2rem;
+		}
+
+		.content button {
+			width: fit-content;
+			background-color: rgba(0, 0, 0, 0.1);
+			color: white;
+			border: 2px solid white;
+			border-radius: 0.25rem;
+			padding: 0.75rem;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.content button:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		.item:nth-of-type(2) .content {
+			display: block;
+			animation: show 0.75s ease-in-out 0.3s forwards;
+		}
+
+		@keyframes show {
+			0% {
+				filter: blur(5px);
+				transform: translateY(calc(-50% + 75px));
+			}
+
+			100% {
+				opacity: 1;
+				filter: blur(0);
+			}
+		}
+
+		.nav {
+			position: absolute;
+			bottom: 2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 5;
+			user-select: none;
+			display: flex;
+			gap: 20px;
+		}
+
+		.nav .btn {
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(10px);
+			color: white;
+			border: 2px solid rgba(255, 255, 255, 0.3);
+			margin: 0;
+			padding: 0.75rem;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 50px;
+			min-height: 50px;
+		}
+
+		.nav .btn:hover {
+			background-color: rgba(255, 255, 255, 0.25);
+			border-color: rgba(255, 255, 255, 0.5);
+			transform: scale(1.1);
+		}
+
+		@media (width > 650px) and (width < 900px) {
+			.content .title {
+				font-size: 1rem;
+			}
+
+			.content .description {
+				font-size: 0.7rem;
+			}
+
+			.content button {
+				font-size: 0.7rem;
+			}
+
+			.item {
+				width: 160px;
+				height: 270px;
+
+				&:nth-child(3) {
+					display: none;
+				}
+
+				/* Square previews for stacked items */
+				&:nth-child(n+4) {
+					width: 150px;
+					height: 150px;
+				}
+
+				&:nth-child(4) {
+					left: 2rem;
+				}
+
+				&:nth-child(5) {
+					left: calc(2rem + 160px);
+				}
+
+				&:nth-child(6) {
+					left: calc(2rem + 320px);
+					opacity: 0.5;
+				}
+
+				&:nth-child(n+7) {
+					opacity: 0;
+					pointer-events: none;
+				}
+			}
+		}
+
+		@media (width < 650px) {
+			.content .title {
+				font-size: 0.9rem;
+			}
+
+			.content .description {
+				font-size: 0.65rem;
+			}
+
+			.content button {
+				font-size: 0.7rem;
+			}
+
+			.item {
+				width: 130px;
+				height: 220px;
+
+				&:nth-child(3) {
+					display: none;
+				}
+
+				&:nth-child(4) {
+					left: 1rem;
+				}
+
+				&:nth-child(5) {
+					left: calc(1rem + 140px);
+				}
+
+				&:nth-child(6) {
+					left: calc(1rem + 280px);
+					opacity: 0.5;
+				}
+
+				&:nth-child(n+7) {
+					opacity: 0;
+					pointer-events: none;
+				}
+			}
+		}
+
+		/* Counter Badge for the last visible item (6th child) */
+		.item:nth-child(6)::after {
+			content: attr(data-remaining);
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			padding: 5px 10px;
+			border-radius: 12px;
+			font-size: 0.8rem;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		}
+
+		/* Critical Mobile Fixes for screens < 768px */
+		@media (max-width: 767px) {
+			body {
+				overflow-y: auto;
+				height: auto;
+				min-height: 100vh;
+			}
+
+			main {
+				height: auto;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.item:nth-child(1),
+			.item:nth-child(2) {
+				position: relative;
+				min-height: 60vh;
+				flex-shrink: 0;
+			}
+
+			.content {
+				width: 90%;
+				left: 5%;
+				padding: 1.5rem;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)) !important;
+			}
+
+			.content .title {
+				font-size: 1.5rem !important;
+			}
+
+			.content .description {
+				font-size: 0.9rem !important;
+			}
+
+			/* Hide side preview stack on mobile */
+			.item:nth-child(3) {
+				position: relative !important;
+				left: 50% !important;
+				transform: translateX(-50%) !important;
+				top: auto !important;
+				margin: 10px auto;
+				width: 90% !important;
+				max-width: 300px;
+				height: 300px !important;
+			}
+
+			.item:nth-child(n+4) {
+				display: none !important;
+			}
+
+			.nav {
+				position: fixed;
+				bottom: 20px;
+				gap: 30px;
+			}
+
+			.nav .btn {
+				min-width: 60px;
+				min-height: 60px;
+				font-size: 1.5rem;
+			}
+
+			.home-icon {
+				width: 40px;
+				height: 40px;
+			}
+
+			.home-icon img {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<main>
+		<ul class='slider'>
+
+			<li class="item" style="background-image: url('images2/IMG_1450.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/3000261a-cce8-41c4-bbc1-15ee6bb16c79.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/303422880_571025811433296_9055175108708710870_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336529691_3461558317454156_3657447518042279791_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285827079_513655080503703_6952477597144900401_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/296009229_544427604093117_6514470451734242739_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/286357984_8302729939752553_8198878830537873442_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/298742269_557412696127941_255918205474494387_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285342762_508591131010098_3030051878917585095_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285160072_507349721134239_6890935673645024645_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285532792_508591087676769_7051827490208084346_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336322325_1543077852843413_2390202291966310372_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/311599459_490555873087607_4543549218559486123_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/313271580_503426128467248_1221598192676702440_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/5390dfaa-c5de-4d4b-8523-e4a4a66287e3.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285640139_508591057676772_3803628090838458180_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/8c9ec159-27a8-440d-a2cb-90fc3689f181.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/1000087200_a9ad15b741851d7bd848ab1d97466048-12_2_2022, 10_13_24 AM.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/289433388_520762133126331_3362991555426755709_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336372837_748227403633653_4011930323124587326_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/288444607_516628540206357_2650926674991966108_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/5fe6c3d9-8230-4e97-94d3-ab49567a01ba.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/6fca2b5e-33ff-403c-b1af-7a93b2eec8d7.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/743655be-dd0a-4711-864d-350391b03293.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299374671_556627706206440_5203789283158678063_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/308099852_473557338120794_3102953568531029961_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/9.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/302343851_566980508504493_1834978285906274147_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/3fb62802-562a-4267-a9d2-a14b9635947c.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295778632_544439904091887_1937164041653013991_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/aa02e7ff-3c60-4cac-9082-4fec80e90dc5.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299436182_556629506206260_5425238150363907733_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295528069_544441044091773_5343157036949105574_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/287157838_516337820235429_420913726892073525_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336665383_914951243055967_4477447718748942135_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336195588_1260684918199638_1914359677867955698_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/592c248a-5f42-4b09-b524-e31a9f8d94ef.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/287449727_516337853568759_1328051725556657442_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_0663.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285843199_509631217572756_6198694129111116416_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/0a4d7292-aa4f-4aef-b93f-327872c0d0f1.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/307937782_471404815002713_6813130368610779445_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/13.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/296009229_544427604093117_6514470451734242739_n (1).jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/287734188_516337770235434_2900066707048140729_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/184757ec-b7fd-4f98-93f6-d42f98deeeff.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336896790_935553261204977_6432205366339656470_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/42a56ba2-1de7-49e6-aa2e-d0aeb30ce4f5.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_1621.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/10.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_1638.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285600150_508317394370805_1363769394617367780_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295538350_543753330827211_332759141277915459_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/287787266_514907437045134_3420633322831708984_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/305806333_573008184568392_7735612818604093179_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/eefb6045-546f-4d54-8dd4-2380a1c57bd7.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/8d0d9349-dfd2-4768-bc9e-4678d3a0b65c.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_0725.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_1439.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/305981277_464222162387645_6983555731519556581_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_0068.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336474525_227723033108408_5607746116474593547_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/312429838_499589215517606_2153113271111476246_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295758320_544431884092689_1388668723408926771_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/be097157-7865-4bde-a236-8a69719e2634.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295497233_543373050865239_5906906027277828135_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/f52e14d1-51a8-45df-a978-fb01ac67f9cd.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336160598_243763788117204_8248532414751326357_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/295957959_544441097425101_32235536100391469_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336112736_963763204801478_1710534239347990398_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299039677_557412769461267_251888416953345746_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/1225a150-c2b4-4b7a-a5d2-28681c9fdaf0.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/287858619_515707040298507_8400768801985479326_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336782147_520949860238013_6388572868125995108_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/e634a674-7210-4c58-88a2-b3011779a5be.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295709076_544430307426180_4423744501594633522_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/312270117_498266355649892_7626845355726472866_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295730619_544433027425908_6165107737743009999_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295666386_543753097493901_1353277453794540014_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299316939_557412849461259_6871544282814447648_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/336272902_626323302683429_8992959441595761936_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/291667113_528587522343792_3288445613866263543_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/289538242_520762209792990_6843637797559527610_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_0608.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/57a0c4d8-cd99-4797-bcff-41a3fb8ad7cb.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299173704_556629626206248_2893434936309159039_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/299625612_557897249412819_9071108873403118944_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295778614_544431964092681_5330465643906115805_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285344796_508591027676775_9196856868929405568_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285302035_508317941037417_7218029990660504844_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/285620157_508317897704088_5937823770975494935_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/311342851_488581863285008_807411197063089856_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/295817239_544430017426209_4251528930298683994_n.jpg')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/1000081471_d8310627870e96e7dbcb2f635f79a7bb-11_28_2022, 8_37_55 PM (1).png')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/universe desktop wallpaper.png')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/1000081471_d8310627870e96e7dbcb2f635f79a7bb-11_28_2022, 8_37_55 PM.png')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item"
+				style="background-image: url('images2/1000081471_d8310627870e96e7dbcb2f635f79a7bb-11_28_2022__8_37_55_PM__1_-removebg-preview.png')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2429.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2428.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_0832.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2311.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2307.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2298.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_1784.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2299.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2312.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2302.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2303.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2315.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_1783.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2314.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2300.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2319.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2293.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2291.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2294.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2295.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2322.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2308.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2320.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2296.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2432.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2426.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2427.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2425.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2431.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+			<li class="item" style="background-image: url('images2/IMG_2424.JPG')">
+				<div class="content">
+					<h2 class="title">Aryavarta Trust</h2>
+					<p class="description">Preserving Sanatana Dharma and Vedic Heritage.</p>
+					<button>View</button>
+				</div>
+			</li>
+		</ul>
+		<nav class='nav'>
+			<button class='btn prev' aria-label="Previous Slide"><ion-icon
+					name="arrow-back-outline"></ion-icon></button>
+			<button class='btn next' aria-label="Next Slide"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+		</nav>
+	</main>
+
+	<div class="home-icon" id="home">
+		<a href="index.html">
+			<img src="images/logo.png" alt="home">
+		</a>
+	</div>
+	<script>
+		// Optional: Add custom behavior here if needed.
+		// For example, you could dynamically adjust the icon visibility.
+		window.addEventListener('scroll', function () {
+			const icon = document.getElementById('whatsapp-icon');
+			if (window.scrollY > 100) {
+				icon.style.opacity = '1';
+			} else {
+				icon.style.opacity = '0.8';
+			}
+		});
+	</script>
+	<script>
+		const slider = document.querySelector('.slider');
+		const sliderList = slider;
+
+		function activate(e) {
+			const items = document.querySelectorAll('.item');
+			// Limit functionality to when enough items distinct exist
+			if (e.target.closest('.next')) {
+				slider.append(items[0]);
+			}
+			if (e.target.closest('.prev')) {
+				slider.prepend(items[items.length - 1]);
+			}
+			updateRemainingCount();
+		}
+
+		function updateRemainingCount() {
+			const items = document.querySelectorAll('.item');
+			const total = items.length;
+			// Item 6 is the last visible one in the stack.
+			// Remaining = Total - 4 (Active + 3 Next basically)? 
+			// Visually showing "how many more".
+			const remaining = total > 4 ? `+${total - 4}` : '';
+
+			// Remove attr from all
+			items.forEach(item => item.removeAttribute('data-remaining'));
+
+			// Add to 6th item if it exists
+			if (items[5]) {
+				items[5].setAttribute('data-remaining', remaining);
+			}
+		}
+
+		// Keyboard Navigation
+		document.addEventListener('keydown', (e) => {
+			const items = document.querySelectorAll('.item');
+			if (e.key === 'ArrowRight') {
+				slider.append(items[0]);
+				updateRemainingCount();
+			}
+			if (e.key === 'ArrowLeft') {
+				slider.prepend(items[items.length - 1]);
+				updateRemainingCount();
+			}
+		});
+
+		document.addEventListener('click', activate, false);
+
+		// Initial call
+		updateRemainingCount();
+
+	</script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

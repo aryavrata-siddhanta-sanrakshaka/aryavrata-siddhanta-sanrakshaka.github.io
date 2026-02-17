@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Library - Aryavarta Siddhanta Sanrakshaka Trust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Access, download and read free e‑books on Sanskrit, Vedic texts and Indian philosophy. Browse our curated library of Upanishads, Yogashastra, Smritis and more." />
+  <meta name="keywords"
+    content="e‑book, PDF download, read online, Sanskrit texts, Vedic literature, Upanishad PDFs, Yoga Shastra, Indian philosophy, free e‑books, digital library" />
+  <meta name="author" content="Aryavarta Siddhanta Sanrakshaka Trust" />
+
+  <!-- Standard CSS Links -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Reset & Base ── */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: "Source Sans Pro", Arial, sans-serif;
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-wrapper {
+      flex: 0 0 auto;
+      background: #fff;
+      z-index: 100;
+      position: relative;
+    }
+
+    .fh5co-nav {
+      margin-bottom: 0;
+    }
+
+    /* ── Main content fills remaining viewport ── */
+    #page-content {
+      flex: 1 0 auto;
+      display: flex;
+      min-height: calc(100vh - 120px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── Collapsible Sidebar ── */
+    .sidebar {
+      width: 300px;
+      min-width: 300px;
+      background: #16213e;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.3s cubic-bezier(.4, 0, .2, 1), min-width 0.3s cubic-bezier(.4, 0, .2, 1);
+      z-index: 20;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+
+    .sidebar.collapsed {
+      width: 52px;
+      min-width: 52px;
+    }
+
+    /* Sidebar header — always visible */
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+      min-height: 48px;
+    }
+
+    .sidebar-header .toggle-btn {
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ccc;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .sidebar-header .toggle-btn:hover {
+      background: #F73859;
+      color: #fff;
+    }
+
+    .sidebar-header h3 {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      overflow: hidden;
+    }
+
+    .sidebar-header .book-count {
+      background: #F73859;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    /* When collapsed, hide title and count */
+    .sidebar.collapsed .sidebar-header h3,
+    .sidebar.collapsed .sidebar-header .book-count {
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+    }
+
+    /* Book list */
+    #pdfList {
+      list-style: none;
+      padding: 8px;
+      margin: 0;
+      overflow-y: auto;
+      flex: 1;
+      transition: opacity 0.2s ease;
+    }
+
+    .sidebar.collapsed #pdfList {
+      opacity: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    #pdfList::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    #pdfList::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #pdfList::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+
+    #pdfList li {
+      padding: 11px 14px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: #c8c8d0;
+      font-size: 0.92rem;
+      line-height: 1.35;
+      border-left: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #pdfList li::before {
+      content: '📄';
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    #pdfList li:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      border-left-color: rgba(247, 56, 89, 0.5);
+    }
+
+    #pdfList li.active {
+      background: rgba(247, 56, 89, 0.12);
+      border-left-color: #F73859;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    #pdfList li.active::before {
+      content: '📖';
+    }
+
+    /* ── PDF Viewer ── */
+    .pdf-viewer {
+      flex: 1;
+      position: relative;
+      background: #0f0f23;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* Placeholder */
+    #placeholder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(200, 200, 210, 0.6);
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 0 30px;
+      line-height: 1.6;
+    }
+
+    #placeholder .emoji {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    #placeholder small {
+      color: rgba(200, 200, 210, 0.4);
+    }
+
+    /* PDF iframe container */
+    #pdfViewerContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+
+    /* Download button */
+    .download-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 22px;
+      background: #F73859;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 4px 16px rgba(247, 56, 89, 0.3);
+      transition: all 0.3s;
+    }
+
+    .download-btn:hover,
+    .download-btn:focus {
+      background: #d62c4a;
+      color: #fff;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(247, 56, 89, 0.4);
+    }
+
+    /* Active book name bar at top of viewer */
+    .viewer-bar {
+      display: none;
+      align-items: center;
+      padding: 8px 16px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #e0e0e0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      min-height: 40px;
+    }
+
+    .viewer-bar.show {
+      display: flex;
+    }
+
+    /* Footer */
+    .footer-wrapper {
+      flex: 0 0 auto;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 767px) {
+      .sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 260px;
+        min-width: 260px;
+        z-index: 50;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .sidebar.collapsed {
+        width: 0;
+        min-width: 0;
+        border-right: none;
+      }
+
+      .sidebar.collapsed .sidebar-header {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .pdf-viewer {
+        min-height: 400px;
+      }
+
+      .viewer-bar {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Standard Navigation -->
+  <div class="nav-wrapper">
+    <nav class="fh5co-nav" role="navigation">
+      <div class="container-wrap">
+        <div class="top-menu">
+          <div class="row">
+            <div class="col-md-12 col-offset-0 text-center">
+              <div id="fh5co-logo"><a href="index.html"><img src="images/logo.png" width="130px" height="auto">Aryavarta
+                  Siddhanta Sanrakshaka Trust</a></div>
+            </div>
+            <div class="col-md-12 col-md-offset-0 text-center menu-1">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="library.html">Library</a></li>
+                <li><a href="aryavartamessage.blogspot.com" target="_blank">Blog</a></li>
+                <li class="has-dropdown">
+                  <a href="#">Programs</a>
+                  <ul class="dropdown">
+                    <li><a href="#aarogyam">Aarogyam</a></li>
+                    <li><a href="#tatvagyan">Tatvagyan</a></li>
+                    <li><a href="#purohit">Purohit</a></li>
+                    <li><a href="#aradhana">Aradhana</a></li>
+                    <li><a href="#bodham">Bodham</a></li>
+                    <li><a href="#anna">Anna</a></li>
+                    <li><a href="#gokulam">Gokulam</a></li>
+                  </ul>
+                </li>
+                <li><a href="events.html">Annual Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="donate.html" class="donate">Donate</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Library Interface -->
+  <div id="page-content">
+    <!-- Collapsible sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="toggle-btn" id="sidebarToggle" title="Toggle book list">✕</button>
+        <h3>📚 Book Collection</h3>
+        <span class="book-count" id="bookCount">0</span>
+      </div>
+      <ul id="pdfList"></ul>
+    </div>
+
+    <!-- PDF Viewer -->
+    <div class="pdf-viewer">
+      <div class="viewer-bar" id="viewerBar"></div>
+      <div id="placeholder">
+        <div class="emoji">📚</div>
+        Select a document from the list to view or download<br>
+        <small>Collection includes Upanishads, Yoga Shastras, and more</small>
+      </div>
+      <div id="pdfViewerContainer">
+        <iframe id="pdfIframe"></iframe>
+        <a id="downloadBtn" class="download-btn" href="#" target="_blank">
+          Download PDF ⬇️
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <div class="footer-wrapper">
+    <div class="container-wrap">
+      <footer id="fh5co-footer" role="contentinfo">
+        <div class="col-md-4 text-center">
+          <h3>Swami Karpatrai Dham - Shree Ramkripeshwar Mahadev Mandir, Mansarover Ghat, Varanasi, Uttar Pradesh 221001
+          </h3>
+        </div>
+        <div class="col-md-4 text-center">
+          <h2><a href="#">आर्यावर्त सिद्धान्त संरक्षक न्यास,वाराणसी</a></h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <p>
+          <ul class="fh5co-social-icons">
+            <li><a href="mailto:asstrust8@gmail.com"><i class="icon-mail2"></i></a></li>
+            <li><a
+                href="https://www.facebook.com/riteshdubeydub?mibextid=wwXIfr&rdid=0QKoe4awlQfFRfAg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1PGZLWfsYc%2F%3Fmibextid-wwXIfr"><i
+                  class="icon-facebook2"></i></a></li>
+            <li><a href="https://www.instagram.com/aryavart_trust/profilecard"><i class="icon-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@aryavarttrust"><i class="icon-youtube2"></i></a></li>
+            <li><a href="https://t.me/joinchat/RWAzfRjvfVUvXNhK"><i class="icon-telegram"></i></a></li>
+            <li><a href="https://x.com/ezdkhxtbyz2hwgm?s=11"><i class="icon-twitter2"></i></a></li>
+            <li><a href="https://g.co/kgs/aYcyRJi"><i class="icon-google"></i></a></li>
+          </ul>
+          </p>
+        </div>
+        <div class="row copyright">
+          <div class="col-md-12 text-center">
+            <p>
+              <small class="block">&copy; 2024 Aryavarta Siddhanta Sanrakshaka Trust, Varanasi. All Rights
+                Reserved.</small>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const pdfFiles = [
+      { "title": "Siddha Siddhanta Paddhati-Gorakh Nath Mandir", "fileId": "1VlgwRXKo-CXm9YWZQ0z3pYZ9Avg6nE5R" },
+      { "title": "Yoga Darshan Vyasbhasya Sutratha sahit", "fileId": "1GzCgwH71TQdZxxk2tSo8jr9JYYaFwQ5_" },
+      { "title": "Ishopanishad", "fileId": "1gM3VV9XY6t4dmjQiT6A8Kqihzk5_TyIG" },
+      { "title": "Ayetrayopanishad", "fileId": "107OZSht0UYQ5rjGOmHR50m4zoBjS8_OW" },
+      { "title": "Kathopanishad", "fileId": "1U7UZAWxegpFBEQMaMSumABKWS1PWuY-B" },
+      { "title": "Goraksha-Samhita Prathamo Bhaga", "fileId": "1wHJyQvv8q9giPH7DhdBOnnUEkq2XJYPo" },
+      { "title": "Ghrenda samhita", "fileId": "1s0NMRRhNg_46KXKpxDcu35sDiQ3iz5P6" },
+      { "title": "Ghrenda Samhita - Datia Swami", "fileId": "1uXGekvTWUddNERE8fsB3ROeL8uj7c23d" },
+      { "title": "Chhandogya Upanishad", "fileId": "1vO_GSWOY2qSksmiAE_eXQksSQUjhYEVu" },
+      { "title": "Prashnopanishad", "fileId": "1PmQMSE-iYU4slRG_sA51Z_QtpbygVPBi" },
+      { "title": "Brihadarankopanishad", "fileId": "1202oRTSubeLhlcCefkgYt3c01n2jZncC" },
+      { "title": "Mundakopanishad", "fileId": "1hrj7ivFLZpw0bFMmgzk-OCvAUGbul3Ea" },
+      { "title": "Yoga darshan Prayogika Parikshadrishti", "fileId": "1X5Z-exB9xCesJ6TH8TpOfFZHlLKqzPHS" },
+      { "title": "Yogabeejam", "fileId": "1Ic61pytB-tEp3v2U3hTffOgFZ9n_TLNP" },
+      { "title": "Shiva svarodaya", "fileId": "1KoT9256nYwTMlHPbbF4o-YiL4dtEe14x" },
+      { "title": "Shiva Samhita", "fileId": "1ym-YcErpEYDGJjnCSpe16FL_g4739yFw" },
+      { "title": "Sad-darshana", "fileId": "1ZIX2TrbXFmoNlZDGMyWC3tRRiGga52_0" },
+      { "title": "Hath-Pradipika", "fileId": "1kqtGmgE8udZhnTFHvxtlkOl6QvvTWujx" },
+      { "title": "Hathyoga-pradipika", "fileId": "1-mbm1xumrV6WW2-ZJqWspXf5bjP0ElJb" }
+    ];
+
+    const listEl = document.getElementById("pdfList");
+    const placeholder = document.getElementById("placeholder");
+    const viewerCont = document.getElementById("pdfViewerContainer");
+    const iframeEl = document.getElementById("pdfIframe");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.getElementById("sidebarToggle");
+    const viewerBar = document.getElementById("viewerBar");
+    const bookCountEl = document.getElementById("bookCount");
+
+    // Set book count
+    bookCountEl.textContent = pdfFiles.length;
+
+    // Build list
+    pdfFiles.forEach(pdf => {
+      const previewURL = `https://drive.google.com/file/d/${pdf.fileId}/preview`;
+      const downloadURL = `https://drive.google.com/uc?export=download&id=${pdf.fileId}`;
+
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      span.className = "title";
+      span.textContent = pdf.title;
+      li.appendChild(span);
+
+      li.addEventListener("click", () => {
+        // Show PDF
+        placeholder.style.display = "none";
+        viewerCont.style.display = "flex";
+        iframeEl.src = previewURL;
+        downloadBtn.href = downloadURL;
+
+        // Active state
+        document.querySelectorAll('#pdfList li').forEach(el => el.classList.remove('active'));
+        li.classList.add('active');
+
+        // Show viewer bar with book title
+        viewerBar.textContent = '📖  ' + pdf.title;
+        viewerBar.classList.add('show');
+
+        // On mobile, auto-collapse sidebar after selecting
+        if (window.innerWidth <= 767) {
+          sidebar.classList.add('collapsed');
+          toggleBtn.textContent = '☰';
+        }
+      });
+
+      listEl.appendChild(li);
+    });
+
+    // Toggle sidebar
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed");
+      toggleBtn.textContent = sidebar.classList.contains("collapsed") ? "☰" : "✕";
+    });
+  </script>
+
+</body>
+
+</html>
